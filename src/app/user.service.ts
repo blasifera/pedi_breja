@@ -23,7 +23,7 @@ export class UserService {
       if(!uid){
         return observableOf(false);
       }else{
-        return this.db.object<boolean>('/admin/' + uid).valueChanges()
+        return this.db.object<boolean>('/admin/' + uid).valueChanges();
       }
     })
   )
