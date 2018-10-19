@@ -1,3 +1,4 @@
+
 <div *ngIf="user.uid | async as uid; else login">
   O id do usuario logado é: {{uid}}
   <div *ngIf="user.isAdmin | async">The user also has ADMIN</div>
