@@ -5,11 +5,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { ProdutosComponent } from './produtos/produtos.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

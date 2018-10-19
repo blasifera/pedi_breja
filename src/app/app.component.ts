@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
+
 
 
 @Component({
@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'Pedi';
-  constructor(public user: UserService) { 
+  constructor() { 
     
   }
 }
