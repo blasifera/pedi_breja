@@ -2,9 +2,17 @@
     color:white
 }
 
+.nav-title{
+    padding-left: 12px;
+}
+
 .produtos{
     margin-top: 200px;
     margin-left: 600px;
     padding: 40px 50px;
     text-align: center
+}
+
+.fa-shopping-cart{
+    color: white;
 }
