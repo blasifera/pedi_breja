@@ -4,8 +4,8 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { ProdutosComponent } from './produtos/produtos.component';
 
 const APP_ROUTES: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: '', component: ProdutosComponent }
+    { path: '', component: LoginComponent },
+    { path: 'produtos', component: ProdutosComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
