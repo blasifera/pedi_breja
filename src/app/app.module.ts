@@ -7,6 +7,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { ProdutosComponent } from './produtos/produtos.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFontAwesomeModule,
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]
