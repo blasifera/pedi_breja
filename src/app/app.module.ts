@@ -8,12 +8,14 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { routing } from './app.routing';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutosComponent,
-    LoginComponent
+    LoginComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
