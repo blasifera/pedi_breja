@@ -4,6 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { map, filter, switchMap } from 'rxjs/operators';
 import { auth } from 'firebase';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Usuario } from './rules/Usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +29,8 @@ export class UserService {
     })
   )
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) { }
-  login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  login(usuario: Usuario) {
+    this.afAuth.auth.signInWithEmailAndPassword(usuario.email, usuario.password);
   }
   logout() {
     this.afAuth.auth.signOut();

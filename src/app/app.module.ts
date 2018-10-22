@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { routing } from './app.routing';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     AngularFireDatabaseModule,
     AngularFontAwesomeModule,
     routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
