@@ -8,10 +8,15 @@
         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
         <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
       </form>
-      <button class="fadeIn fourth submit">Login</button>
+      <button class="fadeIn fourth submit" (click)="user.login()">Login</button>
       <div id="formFooter">
         <a class="underlineHover" href="#">Registre-se</a>
       </div>
     </div>
   </div>
+</div>
+<div *ngIf="user.uid | async as uid; else login">
+  O id do usuario logado é: {{uid}}
+  <div *ngIf="user.isAdmin | async">The user also has ADMIN</div>
+  <div><button (click)="user.logout()">Logout</button></div>
 </div>
