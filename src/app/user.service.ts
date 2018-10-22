@@ -5,6 +5,7 @@ import { map, filter, switchMap } from 'rxjs/operators';
 import { auth } from 'firebase';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Usuario } from './rules/Usuario';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -28,9 +29,13 @@ export class UserService {
       }
     })
   )
-  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) { }
+  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) { }
   login(usuario: Usuario) {
-    this.afAuth.auth.signInWithEmailAndPassword(usuario.email, usuario.password);
+    this.afAuth.auth.signInWithEmailAndPassword(usuario.email, usuario.password).then(res => {
+      this.router.navigate(['/produtos'])
+    }).catch(err => {
+      alert('Email ou senha incorretos');
+    })
   }
   logout() {
     this.afAuth.auth.signOut();
