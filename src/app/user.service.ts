@@ -30,14 +30,22 @@ export class UserService {
     })
   )
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) { }
+  authenticated: boolean = false;
+
   login(usuario: Usuario) {
     this.afAuth.auth.signInWithEmailAndPassword(usuario.email, usuario.password).then(res => {
       this.router.navigate(['/produtos'])
+      this.authenticated = true;
     }).catch(err => {
       alert('Email ou senha incorretos');
+      this.authenticated = false;
     })
   }
+
   logout() {
     this.afAuth.auth.signOut();
+    this.router.navigate(['/login'])
+    this.authenticated = false;
   }
+
 }
