@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Usuario } from '../rules/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Usuario } from '../rules/usuario';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public user: UserService) { }
+  constructor(public user: UserService, private router: Router) { }
 
   usuario : Usuario;
 
