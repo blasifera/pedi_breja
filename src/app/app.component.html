@@ -1,11 +1,10 @@
-  <nav *ngIf="user.verificalogado()" class="navbar navbar-light fixed-top" style="background-color: #472f34;">
+<nav *ngIf="showNavBar" class="navbar navbar-light fixed-top" style="background-color: #472f34;">
   <a class="navbar-brand text-white" routerLink="/produtos">
     <img src="./assets/img/pedibreja.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  <b class="nav-title">Pedi Breja</b>
+    <b class="nav-title">Pedi Breja</b>
   </a>
   <button class="btn-logout btn btn-link" (click)="user.logout()">Logout</button>
   <i class="fa fa-shopping-cart fa-2x" routerLink="/carrinho"></i>
 </nav>
 
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>

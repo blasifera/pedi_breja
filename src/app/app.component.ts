@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './user.service';
+import { Router } from '../../node_modules/@angular/router';
 
 
 
@@ -10,10 +11,16 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'Pedi';
-  constructor(public user: UserService) { 
-    
+  showNavBar: boolean;
+
+  constructor(private router: Router, private user: UserService) {
+    router.events.subscribe((navigationEnd: any) => {
+      if (navigationEnd.url != null) {
+        this.showNavBar = navigationEnd.url != "/";
+      }
+    })
   }
 
-  
+
 
 }
