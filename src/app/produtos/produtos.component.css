@@ -6,3 +6,10 @@
 .container-fluid{
     margin-top: 60px;
 }
+
+
+.card:hover{
+    filter:grayscale(0%);
+    background-color: #e2e2e2;
+    transition: 1s;
+}
