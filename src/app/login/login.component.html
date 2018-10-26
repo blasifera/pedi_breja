@@ -7,10 +7,10 @@
       <form>
         <input type="text" [(ngModel)]="usuario.email" id="login" class="fadeIn second" name="email" placeholder="Digite seu email">
         <input type="password" [(ngModel)]="usuario.password" id="password" class="fadeIn third" name="password" placeholder="Digite sua senha">
-      </form>
+      </form> <br> <br>
       <button class="fadeIn fourth submit" (click)="logOn()">Login</button>
       <div id="formFooter">
-        <a class="underlineHover" href="#">Registre-se</a>
+        <a class="underlineHover lead" routerLink="/cadastro-usuario">Ainda não é registrado? <br>Registre-se</a>
       </div>
     </div>
   </div>

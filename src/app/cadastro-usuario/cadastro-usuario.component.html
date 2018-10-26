@@ -1,0 +1,20 @@
+<div class="container-login">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <div class="fadeIn first">
+        <img src="./assets/img/pedibreja.png" id="icon" alt="User Icon" />
+      </div>
+      <form>
+        <input type="text" [(ngModel)]="usuario.nome" id="login" class="fadeIn second" name="email" placeholder="Nome completo">
+        <input type="text" [(ngModel)]="usuario.telefone" id="login" class="fadeIn second" name="telefone" placeholder="Telefone">
+        <input type="text" [(ngModel)]="usuario.endereco" id="login" class="fadeIn second" name="email" placeholder="Endereço de entrega">
+        <input type="text" [(ngModel)]="usuario.endereco" id="login" class="fadeIn second" name="email" placeholder="Email">
+        <input type="password" [(ngModel)]="usuario.password" id="password" class="fadeIn third" name="password" placeholder="Senha">
+        <input type="password" [(ngModel)]="usuario.password_rep" id="password" class="fadeIn third" name="password" placeholder="Digite sua senha novamente">
+      </form> <br> <br>
+      <button class="fadeIn fourth submit" (click)="logOn()">Cadastrar</button>
+      
+    </div>
+  </div>
+</div>
+
