@@ -10,17 +10,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { routing } from './app.routing';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormsModule } from '@angular/forms';
-import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
-import { TesteComponent } from './teste/teste.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutosComponent,
     LoginComponent,
-    CarrinhoComponent,
-    CadastroUsuarioComponent,
-    TesteComponent
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
